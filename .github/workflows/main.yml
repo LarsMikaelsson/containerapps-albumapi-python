@@ -22,5 +22,5 @@ jobs:
         with:
           appSourcePath: ${{ github.workspace }}/src
           acrName: crair365aca
-          containerAppName: test-app3
+          containerAppName: test-app2
           resourceGroup: air365-aca
