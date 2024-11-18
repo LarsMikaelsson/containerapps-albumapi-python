@@ -25,6 +25,6 @@ jobs:
           registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          containerAppName: test-app3
+          containerAppName: test-app4
           resourceGroup: air365-aca
           
