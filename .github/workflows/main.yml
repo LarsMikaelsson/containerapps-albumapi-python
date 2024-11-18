@@ -17,10 +17,21 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - uses: azure/docker-login@v1
+        with:
+          login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      #- run: |
+      #  docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/testapp3:${{ github.sha }}
+      #  docker push mycontainer.azurecr.io/myapp:${{ github.sha }}    
+
       - name: Build and deploy Container App
         uses: azure/container-apps-deploy-action@v1
         with:
           appSourcePath: ${{ github.workspace }}/src
           acrName: crair365aca
-          containerAppName: test-app4
+          containerAppName: test-app3
           resourceGroup: air365-aca
+          
