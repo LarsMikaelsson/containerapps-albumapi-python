@@ -21,6 +21,6 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           appSourcePath: ${{ github.workspace }}/src
-          acrName: crair365aca.io
+          acrName: crair365aca
           containerAppName: test-app4
           resourceGroup: air365-aca
