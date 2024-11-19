@@ -22,7 +22,7 @@ jobs:
         with:
           appSourcePath: ${{ github.workspace }}/src
           # acrName: crair365aca
-          registryUrl: crair365aca.io
+          registryUrl: crair365aca.azurecr.io
           acrUsername: ${{ secrets.REGISTRY_USERNAME }}
           acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
           containerAppName: test-app4
